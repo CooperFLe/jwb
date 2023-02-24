@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "jwb"
+version = "0.1.0"
+description = "Connect Wahoo to Garmin"
+authors = ["CooperFLe <cooper@cooperfle>"]
+license = "Unlicense"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^2.2.3"
+requests = "^2.28.2"
+python-dotenv = "^1.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+cloudscraper = "^1.2.68"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
