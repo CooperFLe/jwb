@@ -8,7 +8,7 @@ client_secret = os.getenv("CLIENT_SECRET")
 redirect_uri = os.getenv("REDIRECT_URI")
 
 def download_workout_file(file_url):
-    fo = tempfile.NamedTemporaryFile()
+    fo = tempfile.NamedTemporaryFile(suffix=".fit")
     r = requests.get(file_url)
     fo.write(r.content)
     return fo
