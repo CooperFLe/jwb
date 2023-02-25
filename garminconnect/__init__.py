@@ -707,7 +707,6 @@ class Garmin:
         return None
 
     def upload_activity(self, activity_path: str):
-        print(activity_path)
         """Upload activity in fit format from file."""
         # This code is borrowed from python-garminconnect-enhanced ;-)
         file_base_name = os.path.basename(activity_path)
