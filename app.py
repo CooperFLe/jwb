@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os
 from flask import (
     Flask,
@@ -5,6 +7,7 @@ from flask import (
     redirect,
     url_for
 )
+
 from garminconnect import (
     init_api,
     Garmin,
@@ -19,6 +22,9 @@ from wahoofitness import (
 )
 
 app = Flask(__name__)
+
+def create_app():
+   return app
 
 webhook_token = os.getenv("WEBHOOK_TOKEN")
 email = os.getenv("EMAIL")
